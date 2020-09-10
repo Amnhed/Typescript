@@ -1,16 +1,28 @@
 (function(){
-    // cada vez que creo una nueva variable con let se crea un nuevo espacion en memoria dentro del scope
+     let mensaje: string = 'Hola';
+     let numero: number = 12345;
+     let booleano: boolean = true;
+     let hoy: Date = new Date();
 
-    let mensaje = 'Hola';
+     let mensajeonumero: string | number;
+     mensajeonumero: mensaje;
+     mensajeonumero: numero;
 
-    if( true ) {
+     //spiderman = {} Is missin propierities nombre and edad
+     //Siempre debo declarar objeto con las mismas propiedades por que typescript lo valida
 
-        let mensaje = 'Mundo';
-        const URL= 'http'; //constante uppercase nunca cambiara su valor a lo largo del programa 
-    }
+     let spiderman = {
+         nombre: 'Peter',
+         edad: 30
+     }
 
-    console.log( mensaje )
-    //Hola
+     spiderman = {
+         nombre: 'Tony',
+         edad: 35
+     }
+     console.log(spiderman);
+
+
 
 })();
 

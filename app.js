@@ -1,11 +1,21 @@
 "use strict";
 (function () {
-    // cada vez que creo una nueva variable con let se crea un nuevo espacion en memoria dentro del scope
     var mensaje = 'Hola';
-    if (true) {
-        var mensaje_1 = 'Mundo';
-        var URL_1 = 'http'; //constante uppercase nunca cambiara su valor a lo largo del programa 
-    }
-    console.log(mensaje);
-    //Hola
+    var numero = 12345;
+    var booleano = true;
+    var hoy = new Date();
+    var mensajeonumero;
+    mensajeonumero: mensaje;
+    mensajeonumero: numero;
+    //spiderman = {} Is missin propierities nombre and edad
+    //Siempre debo declarar objeto con las mismas propiedades por que typescript lo valida
+    var spiderman = {
+        nombre: 'Peter',
+        edad: 30
+    };
+    spiderman = {
+        nombre: 'Tony',
+        edad: 35
+    };
+    console.log(spiderman);
 })();
