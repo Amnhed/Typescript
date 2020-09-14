@@ -1,4 +1,4 @@
-(function(){
+(()=>{
     // funciones flecha
     // asignamos una funcion a una constante para no sobreescribir la funcion
     // Las funciones no modificacn el escope al entener una funcion 
