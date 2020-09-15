@@ -1,35 +1,26 @@
 "use strict";
 (function () {
-    // funciones flecha
-    // asignamos una funcion a una constante para no sobreescribir la funcion
-    // Las funciones no modificacn el escope al entener una funcion 
-    // dentro de otra funcion
-    // const hulk = {
-    //     nombre: 'Hulk',
-    //     smash() {
-    //         setTimeout( function() {
-    //setTimeout( () => {
-    //             console.log(`${ this.nombre } smash!! `);
-    //         }, 1000 );
-    //     }
-    // }
-    var miFuncion = function (a) {
-        return a.toUpperCase();
+    //DESESTRUCTURACIONDE OBJETO
+    //({ nombre, poder }: any)
+    //DESESTRUTURACION DE ARREGLO
+    //( [, , arana]: string[] )
+    var avenger = {
+        nombre: 'Steve',
+        clave: 'Capitan steve',
+        poder: 'Droga'
     };
-    var miFuncionF = function (a) { return a.toUpperCase(); };
-    var sumarN = function (a, b) {
-        return a + b;
+    var extraer = function (_a) {
+        var nombre = _a.nombre, poder = _a.poder;
+        console.log(nombre);
+        console.log(poder);
     };
-    //console.log(sumarNum(12,13));
-    var sumarNum = function (a, b) { return a + b; };
-    var hulk = {
-        nombre: 'Hulk',
-        smash: function () {
-            var _this = this;
-            setTimeout(function () {
-                console.log(_this.nombre + " smash!! ");
-            }, 1000);
-        }
+    extraer(avenger);
+    console.log('/////////DESESTRUCTURACION DE AREGLOS//////////');
+    var avengers = ['Thor', 'Ironman', 'Spiderman'];
+    var arana = avengers[2];
+    console.log(arana);
+    var extraerArr = function (_a) {
+        var arana = _a[2];
+        console.log(arana);
     };
-    hulk.smash();
 })();
