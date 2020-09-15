@@ -1,26 +1,14 @@
 "use strict";
-(function () {
-    //DESESTRUCTURACIONDE OBJETO
-    //({ nombre, poder }: any)
-    //DESESTRUTURACION DE ARREGLO
-    //( [, , arana]: string[] )
-    var avenger = {
-        nombre: 'Steve',
-        clave: 'Capitan steve',
-        poder: 'Droga'
-    };
-    var extraer = function (_a) {
-        var nombre = _a.nombre, poder = _a.poder;
-        console.log(nombre);
-        console.log(poder);
-    };
-    extraer(avenger);
-    console.log('/////////DESESTRUCTURACION DE AREGLOS//////////');
-    var avengers = ['Thor', 'Ironman', 'Spiderman'];
-    var arana = avengers[2];
-    console.log(arana);
-    var extraerArr = function (_a) {
-        var arana = _a[2];
-        console.log(arana);
-    };
+(() => {
+    console.log('inicio');
+    const prom1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            //resolve('Se termino el timeout');
+            reject('No se completo la promise');
+        }, 1000);
+    });
+    prom1
+        .then(mensaje => console.log(mensaje))
+        .catch(err => console.warn(err));
+    console.log('Fin');
 })();
