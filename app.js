@@ -1,21 +1,20 @@
 "use strict";
 (() => {
-    //tipado de promise para el resolve
-    //Promise<number>
-    const retirarDinero = (montoRetirar) => {
-        let dineroActual = 1000;
-        return new Promise((resolve, reject) => {
-            if (montoRetirar > dineroActual) {
-                reject('No existen suficientes fondos');
-            }
-            else {
-                //dineroActual = dineroActual - montoRetirar;
-                dineroActual -= montoRetirar;
-                resolve(dineroActual);
-            }
-        });
+    //interfaces crear un objeto y su tipado con diferentes propiedad
+    const enviarMision = (xmen) => {
+        console.log(`Enviado a ${xmen.nombre} a la mision`);
     };
-    retirarDinero(500)
-        .then(montoActual => console.log(`Me queda ${montoActual}`))
-        .catch(console.warn);
+    const regresarAlCUartel = (xmen) => {
+        console.log(`Regresando a ${xmen.nombre} de la mision`);
+    };
+    const wolverine = {
+        nombre: 'Logan',
+        edad: 60,
+    };
+    const storm = {
+        nombre: 'Anguelique',
+        edad: 100,
+    };
+    enviarMision(wolverine);
+    regresarAlCUartel(storm);
 })();
