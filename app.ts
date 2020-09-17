@@ -1,23 +1,15 @@
 (() => {
-    // funion que se jecuta en las clases o en otro lado
-    // expande la funcionalidad  
+  const sumar = (a:number, b:number): number => a +b;
 
-    function imprimirConsola(constructorClase: Function){
-        console.log( constructorClase )
-    }
-    
-    @imprimirConsola
-    class Xmen {
+  const nombre = (): string => 'Hola Mundo';
 
-        constructor (public nombre: string,
-                     public clave: string,
-                    ){ }
-        imprimir() {
-            console.log(`${ this.nombre } - ${ this.clave }`)
-        }
-    }
+  const obtenerSalario = (salario:number):Promise<string> =>{
+      return new Promise( ( resolve, rejected ) =>{
+        resolve('300')
+      });
+  }
 
-    const wolverine = new Xmen('Logan', 'Wolverine')
+  obtenerSalario(300).then( a => console.log(a.toUpperCase() )  )
 
 
 })();
